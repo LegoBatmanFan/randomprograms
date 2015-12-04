@@ -2,9 +2,13 @@
 ///
 /// FizzBuzz
 ///
-/// If a number is divisible by 3, the program will print "FIZZ."
-/// If a number is divisible by 5, the program will print "BUZZ."
-/// If a number is divisible by 15, the program will print "FIZZBUZZ."
+/// if a number if a multiple of 3, print "FIZZ"
+/// if the number is a multiple of 5, print "BUZZ"
+/// if the number is a multiple of 3 and 5 print FIZZBUZZ"
+///
+/// check for i % 15 first, then check for 3 or 5 because you
+/// want multiples of 15 to print out "FIZZBUZZ" instead of
+/// "Fizz" or "Buzz."
 
 using System;
 using System.Text;

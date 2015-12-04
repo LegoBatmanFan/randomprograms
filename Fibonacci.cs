@@ -28,7 +28,7 @@ namespace RandomPrograms
                Console.Out.WriteLine(" ");
 			   
 			   /// Print 25 fibonacci numbers the old fashioned way
-               Console.Out.WriteLine("the old fashion way...let's print 25 fibonacci numbers...");
+               Console.Out.WriteLine("the old fashioned way...let's print 25 fibonacci numbers...");
                oldfashionedfibonacci();
 
           }
