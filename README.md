@@ -19,3 +19,9 @@ printoddnumbers.py ==> Prints all of the odd numbers between 1 and 100
 Fibonacci.cs ==> Prints fibonacci numbers. 
 
 FizzBuzz.cs ==> Prints different messages for numbers that are divisible by 3, 5, or divisible by 3 and 5. 
+
+### SQL
+sql_assessment.sql ==> SQL assessment for a job screening
+
+fizzbuzz.sql ==> The SQL version of Fizz Buzz
+
