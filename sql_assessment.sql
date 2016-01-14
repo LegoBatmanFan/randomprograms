@@ -13,7 +13,6 @@ Run the following commands from the command line FIRST!!!
 	CREATE DATABASE assessment;
 	USE assessment;
 5.  run the script  
-	source \SQLite3\20151220_lhorsley_sql_assessment.sql
 */
 
 /*Drop the tables if they exist*/
