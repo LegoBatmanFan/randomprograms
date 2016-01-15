@@ -1,6 +1,6 @@
 //LegoBatmanFan
-//This program will print out the first six Fibonacci numbers
-//using iteration
+//This program will print out the first n Fibonacci numbers
+//using iteration. The number n is user input.
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -34,7 +34,7 @@ void print_fibonacci(int x)
         if (i < 1){
             printf("%d\n",i);
         }
-        //Now, calculate and print the other four numbers
+        //Now, calculate and print the numbers
         printf("%d\n", sum);
         num001 = num002;
         num002 = sum;
