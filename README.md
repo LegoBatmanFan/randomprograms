@@ -25,3 +25,9 @@ sql_assessment.sql ==> SQL assessment for a job screening
 
 fizzbuzz.sql ==> The SQL version of Fizz Buzz
 
+### C
+fibonacci.c ==> Prints fibonacci numbers
+
+multiplication.c ==> Prints out a multiplication table based on user input
+
+reversestring.c ==> Reverses a string. Allows a user to enter a string of any size. Does not use C functions for reversing strings or calculating the length of a string
