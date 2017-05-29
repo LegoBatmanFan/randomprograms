@@ -20,6 +20,12 @@ Fibonacci.cs ==> Prints fibonacci numbers.
 
 FizzBuzz.cs ==> Prints different messages for numbers that are divisible by 3, 5, or divisible by 3 and 5. 
 
+MultiplicationTables.cs ==> The user enters a number and the multiplication table (for that number) is printed.
+
+PalindromeComplicated.cs ==> Determines if two strings are palindromes. Uses nested if statements.
+
+Palindrome.cs and PalindromeChecks.cs ==> Determines if two strings are palindromes. Uses a class object and inheritance.
+
 ### SQL
 sql_assessment.sql ==> SQL assessment for a job screening
 
