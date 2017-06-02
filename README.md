@@ -15,6 +15,13 @@ multiplication.py ==> Prints the multiplication table up to 12 x 12
 
 printoddnumbers.py ==> Prints all of the odd numbers between 1 and 100
 
+
+
+### Java
+ManipulateMyString.java ==> String manipulation
+
+
+
 ### C Sharp
 Fibonacci.cs ==> Prints fibonacci numbers. 
 
@@ -26,10 +33,14 @@ PalindromeComplicated.cs ==> Determines if two strings are palindromes. Uses nes
 
 Palindrome.cs and PalindromeChecks.cs ==> Determines if two strings are palindromes. Uses a class object and inheritance.
 
+
+
 ### SQL
 sql_assessment.sql ==> SQL assessment for a job screening
 
 fizzbuzz.sql ==> The SQL version of Fizz Buzz
+
+
 
 ### C
 fibonacci.c ==> Prints fibonacci numbers
