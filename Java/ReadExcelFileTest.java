@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Stack;
 
 /************************************************************************************
  * LegoBatmanFan									3 June 2017
@@ -9,6 +10,12 @@ import java.io.IOException;
  * array are printed.
  * 
  * Use with ReadExcelFile.java
+ * -----------------------------------------------------------------------------
+ * Modification History
+ * Date				Author				Description
+ * ----------------------------------------------------------------------------
+ * 3 June 2017		LegoBatmanFan		Created
+ * 6 Dec 2017		LegoBatmanFan		Use a stack to get the data from a spreadsheet
  ************************************************************************************/
 
 public class ReadExcelFileTest {
@@ -18,9 +25,15 @@ public class ReadExcelFileTest {
 		ReadExcelFile readExcelFile = new ReadExcelFile();					
 		
 		//Get the spreadsheet data.
-		String[][] allMyData = readExcelFile.readMyExcelData();
+		String pokemonName, weight, height, type001, type002, type003;
 		
-		int n = 0;	//for the columns
+		Stack<String> stack = new Stack<String>();
+		int pokedexNum, numberSeen, numberCaught;
+		String[][] allMyData = readExcelFile.readMyExcelData();
+		int rowMax = allMyData.length;
+		int colMax = allMyData[0].length;
+		
+		
 		
 		/******************************************
 		 * Print out the data for the spread sheet in the following format (for each pokemon):
@@ -36,51 +49,39 @@ public class ReadExcelFileTest {
 		 * 9. Type 3: LAVA
 		 ******************************************/
 		
-		for(int m = 0; m < allMyData.length; m++){
+		for(int i = 0; i < rowMax; i++){
+			for(int j = 0; j < colMax; j++){
+				//Put the values on a stack
+				stack.push(allMyData[i][j]);
+			}
 			System.out.println("-------------------------------------------------------------------");
-			String pokedexNum = allMyData[m][n];							//Get the pokedex.
-			n++;															//Increment the counter - for move to next column.
-			System.out.println("pokemon #" + (m+1));						//This is the line # in the spreadsheet.
-			System.out.println(n + ". Pokedex Number: " + pokedexNum);		//Print the pokedex #.
-		
 			
-			String pokemonName = allMyData[m][n];							//Get the name.		
-			n++;															//Increment the counter.
-			System.out.println(n + ". Pokemon: " + pokemonName);			//Print the name.
+			//Pop each value off the stack and save it to a variable
+			type003 = stack.pop();
+			type002 = stack.pop();
+			type001 = stack.pop();
+			height = stack.pop();
+			weight = stack.pop();
+			numberCaught = Integer.parseInt(stack.pop());
+			numberSeen = Integer.parseInt(stack.pop());	
+			pokemonName = stack.pop();	
+			pokedexNum = Integer.parseInt(stack.pop());	
 			
-			
-			int numberSeen = Integer.parseInt(allMyData[m][n]);				//Get the number of pokemon seen.
-			n++;															//Increment the counter.
-			System.out.println(n + ". Number seen: " + numberSeen);			//Print the value.
-			
-			int numberCaught = Integer.parseInt(allMyData[m][n]);			//Get the number of pokemon caught.
-			n++;															//Increment the counter - for move to next column.
-			System.out.println(n + ". Number caught: " + numberCaught);		//Print the value.
-			
-			String weight = allMyData[m][n];								//Get the weight.
-			n++;															//Increment the counter.
-			System.out.println(n + ". Weight: " + weight);					//Print the value.
-			
-			String height = allMyData[m][n];								//Get the height.
-			n++;															//Increment the counter.
-			System.out.println(n + ". Height: " + height);					//Print the value.
-			
-			String type001 = allMyData[m][n];								//Get the type.
-			n++;															//Increment the counter.
-			System.out.println(n + ". Type 1: " + type001);					//Print the value.
-			
-			String type002 = allMyData[m][n];								//Get the type.
-			n++;															//Increment the counter.
-			System.out.println(n + ". Type 2: " + type002);					//Print the value.
-			
-			String type003 = allMyData[m][n];								//Get the type.
-			n++;															//Increment the counter.
-			System.out.println(n + ". Type 3: " + type003);					//Print the value.
+			//Print out the values
+			System.out.println("pokemon #" + (i+1));						
+			System.out.println("	Pokedex Number: " + pokedexNum);																											
+			System.out.println("	Pokemon: " + pokemonName);			
+			System.out.println("	Number seen: " + numberSeen);																						
+			System.out.println("	Number caught: " + numberCaught);							
+			System.out.println("	Weight: " + weight);																
+			System.out.println("	Height: " + height);				
+			System.out.println("	Type 1: " + type001);															
+			System.out.println("	Type 2: " + type002);								
+			System.out.println("	Type 3: " + type003);					
 			System.out.println("");
 			System.out.println("");
-			n = 0;	//Set n to 0, so that you start on the first column in the next row.
+			
 		}
-		//}
 	}
 
 	
