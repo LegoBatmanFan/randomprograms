@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 /************************************************************************************
  * LegoBatmanFan									3 June 2017
  * 
@@ -11,7 +8,20 @@ import java.util.List;
  * classifyTriangle: determine the triangle type
  * 
  * Use with TriangleTypeTest.java
+ * -----------------------------------------------------------------------------
+ * Modification History
+ * Date				Author				Description
+ * ----------------------------------------------------------------------------
+ * 3 June 2017		LegoBatmanFan		Created
+ * 19 Dec 2017		LegBatmanFan		Minor modifications
  ************************************************************************************/
+
+package Misc;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
 
 public class TriangleType {
 	

@@ -1,6 +1,3 @@
-import java.io.IOException;
-import java.util.Stack;
-
 /************************************************************************************
  * LegoBatmanFan									3 June 2017
  * 
@@ -16,7 +13,17 @@ import java.util.Stack;
  * ----------------------------------------------------------------------------
  * 3 June 2017		LegoBatmanFan		Created
  * 6 Dec 2017		LegoBatmanFan		Use a stack to get the data from a spreadsheet
+ * 19 Dec 2017		LegoBatmanFan		The method readMyExcelData takes the file name as a parameter
  ************************************************************************************/
+
+package Misc;
+
+import java.io.IOException;
+import java.util.Stack;
+
+import CommonActions.ReadExcelFile;
+
+
 
 public class ReadExcelFileTest {
 
@@ -24,12 +31,13 @@ public class ReadExcelFileTest {
 		//Create the ReadExcelFile object.
 		ReadExcelFile readExcelFile = new ReadExcelFile();					
 		
+		String excelFileName = "//Users//lenahorsley//Documents//Lena//SpreadsheetData//RandomPokemon.xlsx";
 		//Get the spreadsheet data.
 		String pokemonName, weight, height, type001, type002, type003;
 		
 		Stack<String> stack = new Stack<String>();
 		int pokedexNum, numberSeen, numberCaught;
-		String[][] allMyData = readExcelFile.readMyExcelData();
+		String[][] allMyData = readExcelFile.readMyExcelData(excelFileName);
 		int rowMax = allMyData.length;
 		int colMax = allMyData[0].length;
 		

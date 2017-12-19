@@ -1,7 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 /************************************************************************************
  * LegoBatmanFan									3 June 2017
  * 
@@ -13,7 +9,21 @@ import java.util.Scanner;
  * 		was not implemented.
  * 
  * Use with TriangleType.java
+ * -----------------------------------------------------------------------------
+ * Modification History
+ * Date				Author				Description
+ * ----------------------------------------------------------------------------
+ * 3 June 2017		LegoBatmanFan		Created
+ * 19 Dec 2017		LegBatmanFan		Minor modifications
  ************************************************************************************/
+
+package Misc;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
 
 public class TriangleTypeTest {
 

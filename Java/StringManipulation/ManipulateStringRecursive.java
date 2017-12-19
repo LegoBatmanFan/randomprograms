@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 /******************************************************************************************
 * LegoBatmanFan						11 June 2017
 * 
@@ -16,6 +13,11 @@ import java.util.List;
 * 11 June 2017		LegoBatmanFan		Created
 ******************************************************************************************
 */
+package StringManipulation;
+import java.util.ArrayList;
+import java.util.List;
+
+
 
 public class ManipulateStringRecursive {
 
