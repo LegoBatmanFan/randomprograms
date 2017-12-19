@@ -34,7 +34,13 @@ ManipulateStringRecursive.java
 ReadExcelFile.java  
 ReadExcelFileTest.java  
 
+==> Counting the occurence of a character  
+CountCharacters.java  
 
+==> Generating sentences from fragments  
+GenerateSentences.java  
+
+ 
 
 ### C Sharp  
 ==> Prints fibonacci numbers.  
