@@ -13,7 +13,7 @@
  * Date				Author				Description
  * ----------------------------------------------------------------------------
  * 3 June 2017		LegoBatmanFan		Created
- * 19 Dec 2017		LegBatmanFan		Minor modifications
+ * 19 Dec 2017		LegoBatmanFan		Minor modifications
  ************************************************************************************/
 
 package Misc;
