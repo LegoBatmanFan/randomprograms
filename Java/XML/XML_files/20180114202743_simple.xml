@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PokeDex>
+	<Pokemon id="1">
+		<PokeDexNum>025</PokeDexNum>
+		<Name>Pikachu</Name>
+		<NumberSeen>59</NumberSeen>
+		<NumberCaught>47</NumberCaught>
+		<Weight>6.0 kg</Weight>
+		<Height>0.4 m</Height>
+		<type>ELECTRIC</type>
+		<type>NULL</type>
+		<type>MOUSE</type>
+	</Pokemon>
+	<Pokemon id="2">
+		<PokeDexNum>093</PokeDexNum>
+		<Name>Haunter</Name>
+		<NumberSeen>22</NumberSeen>
+		<NumberCaught>20</NumberCaught>
+		<Weight>0.1 kg</Weight>
+		<Height>1.6 m</Height>
+		<type>GHOST</type>
+		<type>POISON</type>
+		<type>GAS</type>
+	</Pokemon>
+	<Pokemon id="3">
+		<PokeDexNum>130</PokeDexNum>
+		<Name>Gyrados</Name>
+		<NumberSeen>9</NumberSeen>
+		<NumberCaught>9</NumberCaught>
+		<Weight>235.0 kg</Weight>
+		<Height>6.5 m</Height>
+		<type>WATER</type>
+		<type>FLYING</type>
+		<type>ATROCIOUS</type>
+	</Pokemon>
+	<Pokemon id="4">
+		<PokeDexNum>131</PokeDexNum>
+		<Name>Lapras</Name>
+		<NumberSeen>3</NumberSeen>
+		<NumberCaught>2</NumberCaught>
+		<Weight>220.0 kg</Weight>
+		<Height>2.5 m</Height>
+		<type>WATER</type>
+		<type>ICE</type>
+		<type>TRANSPORT</type>
+	</Pokemon>
+	<Pokemon id="5">
+		<PokeDexNum>132</PokeDexNum>
+		<Name>Ditto</Name>
+		<NumberSeen>21</NumberSeen>
+		<NumberCaught>21</NumberCaught>
+		<Weight>4.0 kg</Weight>
+		<Height>0.3 m</Height>
+		<type>NORMAL</type>
+		<type>NULL</type>
+		<type>TRANSFORM</type>
+	</Pokemon>
+	<Pokemon id="6">
+		<PokeDexNum>133</PokeDexNum>
+		<Name>Eevee</Name>
+		<NumberSeen>639</NumberSeen>
+		<NumberCaught>595</NumberCaught>
+		<Weight>6.5 kg</Weight>
+		<Height>0.3 m</Height>
+		<type>NORMAL</type>
+		<type>NULL</type>
+		<type>EVOLUTION</type>
+	</Pokemon>
+	<Pokemon id="7">
+		<PokeDexNum>134</PokeDexNum>
+		<Name>Vaporeon</Name>
+		<NumberSeen>10</NumberSeen>
+		<NumberCaught>10</NumberCaught>
+		<Weight>29.0 kg</Weight>
+		<Height>1.0 m</Height>
+		<type>WATER</type>
+		<type>NULL</type>
+		<type>BUBBLE JET</type>
+	</Pokemon>
+	<Pokemon id="8">
+		<PokeDexNum>135</PokeDexNum>
+		<Name>Jolteon</Name>
+		<NumberSeen>6</NumberSeen>
+		<NumberCaught>6</NumberCaught>
+		<Weight>24.5 kg</Weight>
+		<Height>0.8 m</Height>
+		<type>ELECTRIC</type>
+		<type>NULL</type>
+		<type>LIGHTNING</type>
+	</Pokemon>
+	<Pokemon id="9">
+		<PokeDexNum>142</PokeDexNum>
+		<Name>Aerodactyl</Name>
+		<NumberSeen>3</NumberSeen>
+		<NumberCaught>2</NumberCaught>
+		<Weight>59.0 kg</Weight>
+		<Height>1.8 m</Height>
+		<type>ROCK</type>
+		<type>FLYING</type>
+		<type>FOSSIL</type>
+	</Pokemon>
+	<Pokemon id="10">
+		<PokeDexNum>143</PokeDexNum>
+		<Name>Snorlax</Name>
+		<NumberSeen>8</NumberSeen>
+		<NumberCaught>8</NumberCaught>
+		<Weight>460.0 kg</Weight>
+		<Height>2.1 m</Height>
+		<type>NORMAL</type>
+		<type>NULL</type>
+		<type>SLEEPING</type>
+	</Pokemon>
+	<Pokemon id="11">
+		<PokeDexNum>149</PokeDexNum>
+		<Name>Dragonite</Name>
+		<NumberSeen>4</NumberSeen>
+		<NumberCaught>4</NumberCaught>
+		<Weight>210.0 kg</Weight>
+		<Height>2.2 m</Height>
+		<type>DRAGON</type>
+		<type>FLYING</type>
+		<type>DRAGON</type>
+	</Pokemon>
+	<Pokemon id="12">
+		<PokeDexNum>175</PokeDexNum>
+		<Name>Togepi</Name>
+		<NumberSeen>2</NumberSeen>
+		<NumberCaught>2</NumberCaught>
+		<Weight>1.5 kg</Weight>
+		<Height>0.3 m</Height>
+		<type>FAIRY</type>
+		<type>NULL</type>
+		<type>SPIKE BALL</type>
+	</Pokemon>
+	<Pokemon id="13">
+		<PokeDexNum>182</PokeDexNum>
+		<Name>Bellossom</Name>
+		<NumberSeen>1</NumberSeen>
+		<NumberCaught>1</NumberCaught>
+		<Weight>5.8 kg</Weight>
+		<Height>0.4 m</Height>
+		<type>GRASS</type>
+		<type>NULL</type>
+		<type>FLOWER</type>
+	</Pokemon>
+	<Pokemon id="14">
+		<PokeDexNum>185</PokeDexNum>
+		<Name>Sudowoodo</Name>
+		<NumberSeen>17</NumberSeen>
+		<NumberCaught>16</NumberCaught>
+		<Weight>38.0 kg</Weight>
+		<Height>1.2 m</Height>
+		<type>ROCK</type>
+		<type>NULL</type>
+		<type>IMITATION</type>
+	</Pokemon>
+	<Pokemon id="15">
+		<PokeDexNum>192</PokeDexNum>
+		<Name>Sunflora</Name>
+		<NumberSeen>1</NumberSeen>
+		<NumberCaught>1</NumberCaught>
+		<Weight>8.5 kg</Weight>
+		<Height>0.8 m</Height>
+		<type>GRASS</type>
+		<type>NULL</type>
+		<type>SUN</type>
+	</Pokemon>
+	<Pokemon id="16">
+		<PokeDexNum>196</PokeDexNum>
+		<Name>Espeon</Name>
+		<NumberSeen>1</NumberSeen>
+		<NumberCaught>1</NumberCaught>
+		<Weight>26.5 kg</Weight>
+		<Height>0.9 m</Height>
+		<type>PSYCHIC</type>
+		<type>NULL</type>
+		<type>SUN</type>
+	</Pokemon>
+	<Pokemon id="17">
+		<PokeDexNum>197</PokeDexNum>
+		<Name>Umbreon</Name>
+		<NumberSeen>1</NumberSeen>
+		<NumberCaught>1</NumberCaught>
+		<Weight>27.0 kg</Weight>
+		<Height>1.0 m</Height>
+		<type>DARK</type>
+		<type>NULL</type>
+		<type>MOONLIGHT</type>
+	</Pokemon>
+	<Pokemon id="18">
+		<PokeDexNum>200</PokeDexNum>
+		<Name>Misdreavus</Name>
+		<NumberSeen>13</NumberSeen>
+		<NumberCaught>12</NumberCaught>
+		<Weight>1.0 kg</Weight>
+		<Height>0.7 m</Height>
+		<type>GHOST</type>
+		<type>NULL</type>
+		<type>SCREECH</type>
+	</Pokemon>
+	<Pokemon id="19">
+		<PokeDexNum>215</PokeDexNum>
+		<Name>Sneasel</Name>
+		<NumberSeen>32</NumberSeen>
+		<NumberCaught>29</NumberCaught>
+		<Weight>28.0 kg</Weight>
+		<Height>0.9 m</Height>
+		<type>DARK</type>
+		<type>ICE</type>
+		<type>SHARP CLAW</type>
+	</Pokemon>
+	<Pokemon id="20">
+		<PokeDexNum>218</PokeDexNum>
+		<Name>Slugma</Name>
+		<NumberSeen>52</NumberSeen>
+		<NumberCaught>43</NumberCaught>
+		<Weight>35.0 kg</Weight>
+		<Height>0.7 m</Height>
+		<type>FIRE</type>
+		<type>NULL</type>
+		<type>LAVA</type>
+	</Pokemon>
+</PokeDex>
