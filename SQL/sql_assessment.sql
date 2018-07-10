@@ -13,17 +13,28 @@ Run the following commands from the command line FIRST!!!
 	CREATE DATABASE assessment;
 	USE assessment;
 5.  run the script  
-*/
-
-/*Drop the tables if they exist*/
-SELECT 'Drop the salesperson, customer, and orders tables if they exist' AS ' ';
+* -----------------------------------------------------------------------------
+ * Modification History
+ * Date							Author						Description
+ * ----------------------------------------------------------------------------
+ * 10 July 2018			LegoBatmanFan		Modifications
+ ************************************************************************************/
+-- Drop the database if it exists
+ DROP DATABASE IF EXISTS salesdatabase;
+ 
+ 
+-- Create the database and use it
+ CREATE DATABASE salesdatabase;
+ USE salesdatabase;
+ 
+ 
+-- Drop the tables if they exist
 DROP TABLE IF EXISTS salesperson;
 DROP TABLE IF EXISTS customer;
 DROP TABLE IF EXISTS orders;
 
 
-/* Create and populate the salesperson table */
-SELECT 'Creating SALESPERSON table' AS ' ';
+-- Create and populate the salesperson table 
 CREATE TABLE salesperson (
 	ID int NOT NULL,
 	Name varchar(255) NOT NULL,
@@ -31,7 +42,7 @@ CREATE TABLE salesperson (
 	Salary float NOT NULL
 );
 
-SELECT 'SALESPERSON table created. Now inserting data into SALESPERSON table' AS ' ';
+-- Insert data into SALESPERSON table
 INSERT INTO salesperson (ID, Name, Age, Salary) VALUES (1, "Abe", 61, 140000);
 INSERT INTO salesperson (ID, Name, Age, Salary) VALUES (2, "Bob", 34, 44000);
 INSERT INTO salesperson (ID, Name, Age, Salary) VALUES (5, "Chris", 61, 40000);
@@ -39,8 +50,7 @@ INSERT INTO salesperson (ID, Name, Age, Salary) VALUES (7, "Dan", 41, 52000);
 INSERT INTO salesperson (ID, Name, Age, Salary) VALUES (8, "Ken", 57, 115000);
 INSERT INTO salesperson (ID, Name, Age, Salary) VALUES (11, "Joe", 38, 38000);
 
-/* Create and populate the customer table */
-SELECT 'Creating CUSTOMER table' AS ' ';
+-- Create and populate the customer table 
 CREATE TABLE customer (
 	ID int NOT NULL,
 	Name varchar(255) NOT NULL,
@@ -48,14 +58,13 @@ CREATE TABLE customer (
 	Industry_Type char(1) NOT NULL
 );
 
-SELECT 'CUSTOMER table created. Now inserting data into CUSTOMER table ' AS ' ';
+-- Insert data into CUSTOMER table
 INSERT INTO customer (ID, Name, City, Industry_Type) VALUES (4, "Samsonic", "pleasant", "J");
 INSERT INTO customer (ID, Name, City, Industry_Type) VALUES (6, "Panasung", "oaktown", "J");
 INSERT INTO customer (ID, Name, City, Industry_Type) VALUES (7, "Samony", "jackson", "B");
 INSERT INTO customer (ID, Name, City, Industry_Type) VALUES (9, "Orange", "Jackson", "B");
 
-/* Create and populate the orders table */
-SELECT 'Creating ORDERS table' AS ' ';
+-- Create and populate the orders table
 CREATE TABLE orders (
 	order_number int NOT NULL,
 	order_date DATE NOT NULL,
@@ -64,7 +73,7 @@ CREATE TABLE orders (
 	Amount float NOT NULL
 );
 
-SELECT 'ORDERS table created. Now inserting data into ORDERS table ' AS ' ';
+-- Insert data into ORDERS table
 INSERT INTO orders (order_number, order_date, cust_id, salesperson_id, Amount) VALUES (10, "1996-08-02", 4, 2, 540);
 INSERT INTO orders (order_number, order_date, cust_id, salesperson_id, Amount) VALUES (20, "1999-01-30", 4, 8, 1800);
 INSERT INTO orders (order_number, order_date, cust_id, salesperson_id, Amount) VALUES (30, "1995-07-14", 9, 1, 460);
@@ -73,14 +82,11 @@ INSERT INTO orders (order_number, order_date, cust_id, salesperson_id, Amount) V
 INSERT INTO orders (order_number, order_date, cust_id, salesperson_id, Amount) VALUES (60, "1998-03-02", 6, 7, 720);
 INSERT INTO orders (order_number, order_date, cust_id, salesperson_id, Amount) VALUES (70, "1998-05-06", 9, 7, 150);
 
-/* Return all of the data from the Salesperson table */
-SELECT 'Return all of the data from the Salesperson table ' AS ' ';
+-- Return all of the data from the Salesperson table
 SELECT * FROM salesperson;
 
-/*the names of all salespeople that have an order with Samsonic*/
-SELECT 'Return all of the names of all salespeople that have an order with Samsonic' AS ' ';
+-- the names of all salespeople that have an order with Samsonic
 SELECT DISTINCT salesperson.Name FROM salesperson, orders WHERE salesperson.ID = orders.salesperson_id AND orders.cust_id = 4;
 
-/*the names of salespeople that have 2 or more orders*/
-SELECT 'Return all of the names of salespeople that have 2 or more orders' AS ' ';
-SELECT salesperson.Name FROM salesperson, orders WHERE salesperson.ID = orders.salesperson_id GROUP BY salesperson_id HAVING COUNT(salesperson_id) >= 2;
+-- the names of salespeople that have 2 or more orders
+SELECT salesperson.ID, salesperson.Name, COUNT(*) 'Sales' FROM salesperson, orders WHERE salesperson.ID = orders.salesperson_id GROUP BY salesperson.ID, salesperson.Name HAVING COUNT(orders.salesperson_id) >= 2;

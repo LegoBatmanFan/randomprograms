@@ -6,7 +6,20 @@ if the number is a multiple of 3 and 5 print FIZZBUZZ"
 check for i % 15 first, then check for 3 or 5 because you
 want multiples of 15 to print out "FIZZBUZZ" instead of
 "Fizz" or "Buzz."
-*/
+
+-----------------------------------------------------------------------------
+Modification History
+Date						Author						Description
+----------------------------------------------------------------------------
+ 10 July 2018			LegoBatmanFan		Corrections
+ ************************************************************************************/
+
+/* Drop the database if it exists*/
+DROP DATABASE IF EXISTS fizzbuzztest;
+
+/* Create the database and then use it*/
+CREATE DATABASE fizzbuzztest;
+USE fizzbuzztest;
 
 /* Drop the "numbers' table if it exists  */
 SELECT 'Checking to see if the numbers table exists...drop the table if it exists...' AS ' ';
@@ -42,7 +55,6 @@ SELECT CASE
     WHEN MOD(x,3)=0 THEN 'Fizz'
     WHEN MOD(x,5)=0 THEN 'Buzz'
     ELSE x
-    END AS "FizzBuzz!"
+    END AS 'FizzBuzz!'
 FROM numbers ORDER BY x;
-
 
