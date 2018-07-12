@@ -13,7 +13,7 @@
  * --------------------------------------------------------------------------------------
  * Modification History
  * Date					Author					Description
- * 3 October 2017		LegoBatmanFan			Date created
+ * 12 July 2018		LegoBatmanFan			Date created
  ************************************************************************************************/
 
 package StringManipulation;
