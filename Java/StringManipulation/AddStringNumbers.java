@@ -1,3 +1,21 @@
+/************************************************************************************************
+ * LegoBatmanFan														12 July 2018
+ * 
+ * 
+ * AddStringNumbers.java
+ * 
+ * How it works: Take an array of numbers:
+ * 1. Convert the array to a string
+ * 2. Convert the string to an integer
+ * 3. Add 1
+ * 4. Convert to a string
+ * 5. Convert to a number array
+ * --------------------------------------------------------------------------------------
+ * Modification History
+ * Date					Author					Description
+ * 3 October 2017		LegoBatmanFan			Date created
+ ************************************************************************************************/
+
 package StringManipulation;
 
 import java.io.IOException;
