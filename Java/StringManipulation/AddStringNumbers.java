@@ -12,8 +12,9 @@
  * 5. Convert to a number array
  * --------------------------------------------------------------------------------------
  * Modification History
- * Date					Author					Description
- * 12 July 2018		LegoBatmanFan			Date created
+ * Date              Author					Description
+ * 12 July 2018      LegoBatmanFan			Date created
+ * 2 Aug 2018		 LegoBatmanFan			Minor corrections
  ************************************************************************************************/
 
 package StringManipulation;
@@ -79,7 +80,8 @@ public class AddStringNumbers {
 		int newNumber001 = total + 1;
 		System.out.println("Adding 1 to the number (integer) ==> " + newNumber001);
 		
-		char[] newArray001 = newNumberString.toCharArray();
+		String newNumberString001 = Integer.toString(newNumber001);
+		char[] newArray001 = newNumberString001.toCharArray();
 		System.out.println("The size of the array ==> " + newArray001.length);
 		for(int j = 0; j < newArray001.length; j++){
 			myNewArray001[j] = newArray001[j] - '0';
