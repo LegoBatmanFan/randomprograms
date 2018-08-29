@@ -42,25 +42,6 @@ GenerateSentences.java
 
  
 
-### C Sharp  
-==> Prints fibonacci numbers.  
-Fibonacci.cs  
-
-==> Prints different messages for numbers that are divisible by 3, 5, or divisible by 3 and 5.  
-FizzBuzz.cs  
-
-==> The user enters a number and the multiplication table (for that number) is printed.  
-MultiplicationTables.cs  
-
-==> Determines if two strings are palindromes. Uses nested if statements.  
-PalindromeComplicated.cs  
-
-==> Determines if two strings are palindromes. Uses a class object and inheritance.  
-Palindrome.cs  
-PalindromeChecks.cs   
-
-
-
 ### SQL
 ==> SQL assessment for a job screening  
 sql_assessment.sql  
