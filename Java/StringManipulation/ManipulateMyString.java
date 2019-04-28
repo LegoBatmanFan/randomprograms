@@ -16,80 +16,86 @@
  *-----------------------------------------------------------------------------
  *  1 June 2017		LegoBatmanFan		Created
  * 11 June 2017		LegoBatmanFan		Added recursion
+ * 27 April 2019	LegoBatmanFan		Created methods for each step
  ******************************************************************************************
  */
-package StringManipulation;
+package com.legobatmanfan.stringmanipulation;
+
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 public class ManipulateMyString {
 
-	public static void main(String[] args) {
-		
-		//My sentence
-		String sentence = "You may take Captain Solo to Jabba the Hutt after I have Skywalker";
-				
-		//Initialize StringBuilder with my sentence
-		StringBuilder buffer = new StringBuilder(sentence);
-	
-		ManipulateStringRecursive recursiveStrings = new ManipulateStringRecursive();
-		
+	public static List<String> createTokens(String mySentence) {
 		List<String> listOfWords = new ArrayList<String>();
-		
-		//Print the sentence and the buffer
-		System.out.printf("Here's my string ==> %s\n", sentence);
-		System.out.printf("Here's the buffer ==> %s\n", buffer.toString());
-		
-		//Split the sentence into tokens and then print the number of tokens
-		String[] tokens = sentence.split(" ");
+
+		// Split the sentence into tokens and then print the number of tokens
+		String[] tokens = mySentence.split(" ");
 		System.out.println("The number of tokens ==> " + tokens.length);
 		System.out.println("");
 		System.out.println("=============================");
-	
+
 		System.out.println("");
-		
-		//Copy the tokens into a list
-		for(String token : tokens){
+
+		// Copy the tokens into a list
+		for (String token : tokens) {
 			listOfWords.add(token);
 		}
-		
-		//Print the words of the sentence in reverse (use the recently created list)
+		return listOfWords;
+	}
+
+	// Print the words of the sentence in reverse (use the recently created
+	// list)
+	public static void printWordsInReverseUsingList(List<String> myListOfWords) {
 		System.out.println("1. Printing the words in reverse...");
-		for(int i = listOfWords.size() - 1; i >=0; i--){
-			System.out.print(listOfWords.get(i) + " ");
+		for (String word : myListOfWords) {
+			System.out.print(word + " ");
 		}
 		System.out.println("");
 		System.out.println("");
 		System.out.println("=============================");
-		
-		//Print the characters in reverse using buffer.reverse()
+
+	}
+
+	public static void printWordsInReverseWithStringBuilder(StringBuilder myBuilder) {
+		// Print the characters in reverse using builder.reverse()
 		System.out.println("");
-		System.out.println("2. The characters in reverse (using buffer.reverse)...");
-		System.out.println(buffer.reverse());
+		System.out.println("2. The characters in reverse (using builder.reverse)...");
+		System.out.println(myBuilder.reverse());
 		System.out.println("");
 		System.out.println("=============================");
-		
-		//Convert the sentence to a character array and print the character array in reverse
+	}
+	
+	public static char[] convertToCharacterArray(String mySentence){
+		char[] mySentenceArray = mySentence.toCharArray();
+		return mySentenceArray;
+	}
+	
+	public static void printToCharacterArrayAndPrintInReverse(char[] mySentenceArray){
 		System.out.println("");
 		System.out.println("3. Convert the string to a character array and print the character array in reverse...");
-		char[] sentenceArray = sentence.toCharArray();
-		for(int j = sentenceArray.length - 1; j >=0; j--)
-			System.out.print(sentenceArray[j]);
+		
+		for (int j = mySentenceArray.length - 1; j >= 0; j--)
+			System.out.print(mySentenceArray[j]);
+		System.out.println("");
 		System.out.println("");
 		System.out.println("=============================");
-		
-		//Using the character array from above, print the string and it's reverse string recursively
+	}
+	
+	public static void printStringRecursively(char[] mySentenceArray){
 		System.out.println("");
 		System.out.println("4. Print the string recursively (using the character array from a previous step)");
-		recursiveStrings.printStringRecursive(sentenceArray, sentenceArray.length, 0);
+		ManipulateStringRecursive.printStringRecursive(mySentenceArray, mySentenceArray.length, 0);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("=============================");
+	}
+	
+	public static void printReverseStringRecursively(char[] mySentenceArray){
 		System.out.println("");
-		System.out.println("5. Print the reverse of the string recursively (using the character array from a previous step)");
-		recursiveStrings.printReverseStringRecursive(sentenceArray, (sentenceArray.length-1));
+		System.out.println(
+				"5. Print the reverse of the string recursively (using the character array from a previous step)");
+		ManipulateStringRecursive.printReverseStringRecursive(mySentenceArray, (mySentenceArray.length - 1));
 	}
 
 }

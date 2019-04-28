@@ -13,16 +13,12 @@
 * 11 June 2017		LegoBatmanFan		Created
 ******************************************************************************************
 */
-package StringManipulation;
-import java.util.ArrayList;
-import java.util.List;
-
-
+package com.legobatmanfan.stringmanipulation;
 
 public class ManipulateStringRecursive {
 
 	//Print the string recursively, with no local variables
-	public void printStringRecursive(char myString[], int max, int index){
+	public static void printStringRecursive(char myString[], int max, int index){
 		if(index < max){
 			System.out.print(myString[index] + " ");
 			index++;
@@ -31,7 +27,7 @@ public class ManipulateStringRecursive {
 	}
 	
 	//Print the reverse of the string with no local variables
-	public void printReverseStringRecursive(char myString[], int max){
+	public static void printReverseStringRecursive(char myString[], int max){
 		if(max >= 0){
 			System.out.print(myString[max] + " ");
 			max--;

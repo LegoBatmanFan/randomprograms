@@ -15,9 +15,10 @@
  * ----------------------------------------------------------------------------
  * 3 June 2017		LegoBatmanFan		Created
  * 19 Dec 2017		LegBatmanFan		Minor modifications
+ * 28 April 2019	LegoBatmanFan		Updated packages
  ************************************************************************************/
 
-package Misc;
+package com.legobatmanfan.misc;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +29,6 @@ import java.util.Scanner;
 public class TriangleTypeTest {
 
 	public static void main(String[] args) {
-		TriangleType myTriangleTest = new TriangleType();				//create the TriangleType object	
 		List<Double> myTriangleData = new ArrayList<Double>();			//the list for the side data
 		Scanner userInput = new Scanner(System.in);						//for user input
 		String answer1 = "";
@@ -51,14 +51,14 @@ public class TriangleTypeTest {
 		userInput.close();
 		
 		//Check the data
-		String checkDataMessage = myTriangleTest.firstCheckForBadData(answer1, answer2, answer3);
+		String checkDataMessage = TriangleType.firstCheckForBadData(answer1, answer2, answer3);
 		
 		if(checkDataMessage == "data checks passed"){		
 			System.out.println(checkDataMessage);
 			
 			//If the data check passes, classify the triangle and print out the message
-			myTriangleData = myTriangleTest.convertStringToNumber(answer1, answer2, answer3);
-			String classification  = myTriangleTest.classifyTriangle(myTriangleData);
+			myTriangleData = TriangleType.convertStringToNumber(answer1, answer2, answer3);
+			String classification  = TriangleType.classifyTriangle(myTriangleData);
 			System.out.println("Triangle type: " + classification);
 		}
 		else{

@@ -1,7 +1,7 @@
 /************************************************************************************
  * LegoBatmanFan									3 June 2017
  * 
- * ReadExcelFile
+ * OLD_ReadExcelFile
  * Reads data from an excel file using Apache POI 
  * 		https://poi.apache.org/spreadsheet/index.html
  * 
@@ -11,18 +11,19 @@
  * ----------------------------------------------------------------------------
  * 3 June 2017		LegoBatmanFan		Created
  * 19 Dec 2017		LegoBatmanFan		The method readMyExcelData takes the file name as a parameter
+ * 28 April 2019	LegoBatmanFan		Updated packages and removed code that printed data
  ************************************************************************************/
-package CommonActions;
+package com.legobatmanfan.commonactions;
 
 import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFFormulaEvaluator;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Iterator;
-
 
 /*
  * When using this class, add the following in the pom.xml file:
@@ -35,45 +36,40 @@ import java.util.Iterator;
  */
 public class ReadExcelFile {
 
-	public String[][] readMyExcelData(String excelFileName) throws IOException {
-		FileInputStream excelFile = new FileInputStream(new File(excelFileName));
-		Workbook workbook = new XSSFWorkbook(excelFile);
-		DataFormatter objDefaultFormat = new DataFormatter();
-		FormulaEvaluator objFormulaEvaluator = new XSSFFormulaEvaluator(
-				(XSSFWorkbook) workbook);
-		Sheet datatypeSheet = workbook.getSheetAt(0);
-		excelFile.close();
+	public static String[][]  readMyExcelData(String excelFileName) throws IOException {
 
-		int maxRows = datatypeSheet.getPhysicalNumberOfRows();
-		Row checkRow = datatypeSheet.getRow(0);
-		int maxColumns = checkRow.getLastCellNum();
-		String[][] spreadsheetData = new String[maxRows - 1][maxColumns];
+		FileInputStream excelFileInputStream = new FileInputStream(new File(excelFileName));
+
+		XSSFWorkbook workbook = new XSSFWorkbook(excelFileInputStream);
+		XSSFSheet spreadsheet = workbook.getSheetAt(0);
+		Iterator<Row> rowIterator = spreadsheet.iterator();
+		int maxRows = spreadsheet.getPhysicalNumberOfRows();
+		int maxColumns = spreadsheet.getRow(0).getLastCellNum();
+		String[][] spreadsheetData = new String[maxRows][maxColumns];
 		int i = 0;
 		int j = 0;
-
-		Iterator<Row> iterator = datatypeSheet.iterator();
-		Row myHeader = iterator.next();
-
-		while (iterator.hasNext()) {
+		String cellValue;
+		
+		while (rowIterator.hasNext()) {
+			Row row = (XSSFRow) rowIterator.next();
+			Iterator<Cell> cellIterator = row.cellIterator();
 			j = 0;
-			Row currentRow = iterator.next();
-			Iterator<Cell> cellIterator = currentRow.iterator();
 			while (cellIterator.hasNext()) {
-				Cell curerrentCell = cellIterator.next();
-				objFormulaEvaluator.evaluateInCell(curerrentCell);
-				spreadsheetData[i][j] = objDefaultFormat.formatCellValue(
-						curerrentCell, objFormulaEvaluator);
+				Cell cell = cellIterator.next();
+
+				if (cell.getCellTypeEnum() == CellType.NUMERIC) {
+					cellValue = Integer.toString((int) cell.getNumericCellValue());
+				} else {
+					cellValue = cell.getStringCellValue();
+				}
+				spreadsheetData[i][j] = cellValue;
+
 				j++;
+				cellValue = "";
 			}
 			i++;
 		}
-
-		for (int x = 0; x < i; x++) {
-			for (int y = 0; y < j; y++) {
-				System.out.print(spreadsheetData[x][y] + " ");
-			}
-			System.out.println("");
-		}
+		excelFileInputStream.close();
 
 		return spreadsheetData;
 	}
